@@ -1,11 +1,12 @@
 #!/bin/sh
 cd `dirname $0`
 
-yum update -y
-yum install -y autoconf automake libcurl-devel git zsh
-git clone https://github.com/atton/dot_files
-cd dot_files
+sudo yum update -y
+sudo yum install -y autoconf automake libcurl-devel git zsh gcc
+git clone https://github.com/atton/dot_files $HOME/dot_files
+cd $HOME/dot_files
 ./install.sh
+cd $HOME
 git clone https://github.com/OhGodAPet/cpuminer-multi
 cd cpuminer-multi
 ./autogen.sh
