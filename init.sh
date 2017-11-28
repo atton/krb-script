@@ -3,6 +3,9 @@ cd `dirname $0`
 
 yum update -y
 yum install -y autoconf automake libcurl-devel git zsh
+git clone https://github.com/atton/dot_files
+cd dot_files
+./install.sh
 git clone https://github.com/OhGodAPet/cpuminer-multi
 cd cpuminer-multi
 ./autogen.sh
