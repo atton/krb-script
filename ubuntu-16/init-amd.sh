@@ -1,7 +1,7 @@
 #!/bin/sh
 cd `dirname $0`
 
-sudo apt-get install -y ocl-icd-opencl-dev libcurl4-openssl-dev pkg-config libtool libncurses5-dev
+sudo apt-get install -y ocl-icd-opencl-dev libcurl4-openssl-dev pkg-config libtool libncurses5-dev clinfo
 git clone https://github.com/genesismining/sgminer-gm
 cd sgminer-gm
 git checkout -f 5.5.5
