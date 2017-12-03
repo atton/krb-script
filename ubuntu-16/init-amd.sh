@@ -1,7 +1,20 @@
 #!/bin/sh
 cd `dirname $0`
 
-sudo apt-get install -y ocl-icd-opencl-dev libcurl4-openssl-dev pkg-config libtool libncurses5-dev clinfo
+sudo apt-get install -y wget unar
+wget --referer='https://www2.ati.com' https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-17.40-492261.tar.xz
+unar amdgpu-pro-17.40-492261.tar.xz
+cd amdgpu-pro-17.40-492261/
+ls *amd64*deb | xargs sudo dpkg -i 
+ls *amd64*deb | xargs sudo dpkg -i 
+ls *amd64*deb | xargs sudo dpkg -i 
+ls *amd64*deb | xargs sudo dpkg -i 
+ls *amd64*deb | xargs sudo dpkg -i 
+ls *amd64*deb | xargs sudo dpkg -i 
+ls *amd64*deb | xargs sudo dpkg -i 
+ls *amd64*deb | xargs sudo dpkg -i 
+
+
 git clone https://github.com/genesismining/sgminer-gm
 cd sgminer-gm
 git checkout -f 5.5.5
