@@ -12,8 +12,5 @@ yum clean all
 yum install cuda
 modprobe nvidia
 
-git clone https://github.com/tpruvot/ccminer
-cd ccminer
-git checkout -f v2.2-tpruvot
-./build.sh
-make install
+wget https://github.com/genesismining/sgminer-gm/releases/download/5.5.5/sgminer_ubuntu64 -O /usr/local/bin/sgminer
+chmod 755 /usr/local/bin/sgminer
