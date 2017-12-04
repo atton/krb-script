@@ -5,11 +5,5 @@ sudo apt update -y
 sudo apt-get install -y
 sudo apt-get install -y ocl-icd-opencl-dev git zsh powertop autoconf automake libtool build-essential
 
-git clone https://github.com/genesismining/sgminer-gm
-cd sgminer-gm
-git checkout -f 5.5.5
-git submodule init
-git submodule update
-autoreconf -i
-CFLAGS="-O2 -march=native -std=gnu99" ./configure --without-curses
-sudo make install
+wget https://github.com/genesismining/sgminer-gm/releases/download/5.5.5/sgminer_ubuntu64
+sudo mv ./sgminer_ubuntu64 /usr/local/bin/sgminer
