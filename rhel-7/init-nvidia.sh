@@ -12,7 +12,8 @@ yum clean all
 yum install cuda
 modprobe nvidia
 
-git clone https://github.com/tpruvot/ccminer/ $HOME/ccminer
-cd $HOME/ccminer
+git clone https://github.com/tpruvot/cpuminer-multi
+cd cpuminer-multi
+git checkout -f v1.3.1-multi
 ./build.sh
 make install
