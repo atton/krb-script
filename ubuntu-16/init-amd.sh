@@ -1,26 +1,9 @@
 #!/bin/sh
 cd `dirname $0`
 
-sudo apt-get -f install -y wget unar dpkg-dev autoconf automake make libcurl4-openssl-dev pkg-config libtool libncurses5-dev m4
-sudo apt-get autoremove
-sudo apt-get clean
-sudo apt-get update
-sudo apt-get -f install
-
-wget --referer='https://www2.ati.com' https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-17.40-492261.tar.xz
-unar amdgpu-pro-17.40-492261.tar.xz
-cd amdgpu-pro-17.40-492261/
-sudo dpkg -i -R  .
-sudo apt-get -f install
-sudo dpkg -i -R  .
-sudo apt-get -f install
-sudo dpkg -i -R  .
-sudo apt-get -f install
-sudo dpkg -i -R  .
-sudo apt-get -f install
-sudo dpkg -i -R  .
-sudo apt-get -f install
-
+sudo apt update -y
+sudo apt-get install -y
+sudo apt-get install -y ocl-icd-opencl-dev git zsh powertop autoconf automake libtool build-essential
 
 git clone https://github.com/genesismining/sgminer-gm
 cd sgminer-gm
