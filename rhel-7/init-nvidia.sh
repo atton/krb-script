@@ -1,16 +1,19 @@
 #!/bin/sh
 cd `dirname $0`
 
-yum install -y wget kernel-tools yum-utils epel-release kernel-devel rpm-build wget git
+yum install -y epel-release
+yum install --enablerepo=epel -y wget kernel-tools yum-utils epel-release kernel-devel rpm-build wget git unzip libstdc++-static
 
-wget http://us.download.nvidia.com/XFree86/Linux-x86_64/384.98/NVIDIA-Linux-x86_64-384.98.run
-# sh NVIDIA-Linux-x86_64-384.98.run # tui
-
-wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda-repo-rhel7-9-0-local-9.0.176-1.x86_64-rpm
-rpm -i cuda-repo-rhel7-9-0-local-9.0.176-1.x86_64-rpm
+wget https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-8.0.61-1.x86_64.rpm
+yum install -y cuda-repo-rhel7-8.0.61-1.x86_64.rpm
 yum clean all
-yum install cuda
+yum install -y cuda-8-0
+rm cuda-repo-rhel7-8.0.61-1.x86_64.rpm
+
 modprobe nvidia
 
-wget https://github.com/genesismining/sgminer-gm/releases/download/5.5.5/sgminer_ubuntu64 -O /usr/local/bin/sgminer
-chmod 755 /usr/local/bin/sgminer
+wget https://github.com/xmrig/xmrig-nvidia/archive/v2.4.2.zip
+unzip v2.4.2.zip
+cd xmrig-nvidia-2.4.2
+cmake3 . -DWITH_HTTPD=OFF
+make
