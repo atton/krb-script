@@ -10,6 +10,8 @@ cd hoge
 ./ati-installer.sh  -- --buildpkg RedHat/RHEL7_64a --NoXServer
 yum install -y ../fglrx64_p_i_c-14.41-1.x86_64.rpm
 modprobe fglrx
+rm -rf fglrx-14.41
+rm -rf linux-amd-14.41rc1-opencl2-sep19.zip
 
 wget https://github.com/genesismining/sgminer-gm/releases/download/5.5.5/sgminer_ubuntu64
 mv ./sgminer_ubuntu64 /usr/local/bin/sgminer
