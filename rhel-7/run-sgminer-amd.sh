@@ -1,9 +1,4 @@
 #!/bin/sh
 cd `dirname $0`
-
-apt update -y
-apt-get install -y
-apt-get install -y ocl-icd-opencl-dev git zsh powertop autoconf automake libtool build-essential
-
-wget https://github.com/genesismining/sgminer-gm/releases/download/5.5.5/sgminer_ubuntu64
-mv ./sgminer_ubuntu64 /usr/local/bin/sgminer
+/usr/local/bin/sgminer -o stratum+tcp://krb.crypto-coins.club:6666 -u KgGc79QyYag4LugEc2Gnxobt7Mfe9CSEh4NqGzdysooL3Czy6mKtuqLiCehzgoBDESTaYDN3U9XtgLxVJLmPCi397ppx6cL -p x >& /dev/null &
+disown $1
