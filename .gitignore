@@ -3,9 +3,12 @@
 osx/ccminer-cryptonight-mac
 osx/cpuminer-multi-opencl
 rhel-7/ccminer
+rhel-7/cpuminer-multi/
 rhel-7/fglrx-14.41/
 rhel-7/linux-amd-14.41rc1-opencl2-sep19.zip
 rhel-7/NVIDIA-Linux-x86_64-384.98.run
+rhel-7/v2.4.2.zip
+rhel-7/xmrig-nvidia-2.4.2/
 ubuntu-16/amdgpu-pro-17.40-492261/
 ubuntu-16/amdgpu-pro-17.40-492261.tar.xz
 ubuntu-16/cpuminer-multi
