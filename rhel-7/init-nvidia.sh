@@ -17,4 +17,5 @@ unzip v2.4.2.zip
 cd xmrig-nvidia-2.4.2
 cmake3 . -DWITH_HTTPD=OFF
 make
+cp xmrig-nvidia /usr/local/bin
 rm ../v2.4.2.zip
