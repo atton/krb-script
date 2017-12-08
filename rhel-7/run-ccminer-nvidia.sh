@@ -3,5 +3,5 @@ cd `dirname $0`
 
 sudo pkill ccminer
 sudo powertop --auto-tune
-sudo /usr/local/bin/ccminer -a cryptonight -o stratum+tcp://krb.crypto-coins.club:6666 -u KgGc79QyYag4LugEc2Gnxobt7Mfe9CSEh4NqGzdysooL3Czy6mKtuqLiCehzgoBDESTaYDN3U9XtgLxVJLmPCi397ppx6cL -p x >& /dev/null &
+sudo /usr/local/bin/ccminer -a cryptonight -o stratum+tcp://us2.mininggood.com:3353 -u KgGc79QyYag4LugEc2Gnxobt7Mfe9CSEh4NqGzdysooL3Czy6mKtuqLiCehzgoBDESTaYDN3U9XtgLxVJLmPCi397ppx6cL -p x >& /dev/null &
 disown $1
