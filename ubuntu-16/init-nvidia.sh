@@ -9,6 +9,7 @@ wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/c
 dpkg -i cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
 apt update -y
 apt-get install -y cuda cuda-drivers zip cmake
+rm cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
 
 modprobe nvidia
 
