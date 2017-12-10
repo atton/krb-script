@@ -3,11 +3,12 @@ cd `dirname $0`
 
 apt update -y
 apt upgrade -y
+apt-get install -y wget
 apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
-http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
 dpkg -i cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
 apt update -y
-apt install -y cuda cuda-drivers unzip cmake
+apt-get install -y cuda cuda-drivers zip cmake
 
 modprobe nvidia
 
